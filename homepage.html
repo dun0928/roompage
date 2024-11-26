@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>寝室主页</title>
+  <style>
+    body {
+      /* background-image: url('photos/nandamen.png'); */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: 'Cursive', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 48px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-top: 50px;
+      animation: fadeInUp 1s ease both;
+    }
+    #room-info-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      width: 60%;
+      margin-top: 30px;
+      animation: fadeIn 1.5s ease both;
+    }
+
+
+    #room-info-container p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin: 10px 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+
+    #photo-gallery {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      margin-top: 50px;
+      animation: fadeIn 2s ease both;
+    }
+
+ 
+    #photo-gallery img {
+      width: 20%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    #photo-gallery img:hover {
+      transform: scale(1.1);
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-top: 30px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      width: 80%;
+      margin-top: 30px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      bottom: -5px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #3ad0e0;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>我们的寝室 - 梦想起航的地方</h1>
+  <div id="photo-gallery">
+    <img src="photos/nandamen.png" alt="">南大门
+    <img src="photos/library.png" alt="">图书馆
+    <img src="photos/ting.png" alt="">醉晚亭
+  </div>
+  <div id="room-info-container">
+    <p>寝室成员：史梓洋，王逸轩，张鸿瑞，卢泳希</p>
+    <p>寝室号：329</p>
+    <p>这里是我们在校园中的温馨小窝，充满了欢笑与梦想。我们一起学习，一起成长，共同度过难忘的时光。</p>
+  </div>
+  <nav>
+    <a href="https://gyb-cloud.github.io/gyb--/cs2409.html">返回班级主页</a>
+    <a href="#">寝室首页</a>
+    <a href="https://dun0928.github.io/szy789/">史梓洋的主页</a>
+    <a href="sports.html">王逸轩的主页</a>
+    <a href="hobby.html">张洪瑞的主页</a>
+    <a href="emali.html">卢泳希的主页</a>
+  </nav>
+  <button onclick="showMessage()">点击了解更多</button>
+
+  <script>
+    function showMessage() {
+      alert('欢迎向 2464756727@qq.com 发邮件以了解更多我们的故事');
+    }
+  </script>
+</body>
+
+</html>
